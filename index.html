@@ -17,7 +17,7 @@
         }
 
         .container {
-            max-width: 50vw;
+            max-width: 90vw;
             width: 100%;
         }
 
@@ -89,6 +89,12 @@
             font-style: italic;
             color: #888;
         }
+
+        @media (min-width: 600px) {
+            .container {
+                max-width: 50vw;
+            }
+        }
     </style>
 </head>
 
@@ -133,33 +139,22 @@
                         &lt;p&gt;
                     </div>
                     <p>Soy Guillermo Vaello, un desarrollador versátil y multidisciplinario con una sólida formación
-                        académica y
-                        profesional. Me gradué en Publicidad por la <b>Universidad Complutense de Madrid (UCM)</b>,
-                        donde inicié mi carrera en el
-                        diseño gráfico, desarrollando un agudo sentido estético y una profunda comprensión de la
-                        comunicación visual. Mi
-                        pasión por la tecnología me llevó a especializarme en UI y UX, campos en los que destaco por mi
-                        capacidad para crear
-                        interfaces intuitivas y experiencias de usuario atractivas.
+                        académica y profesional. Me gradué en Publicidad por la <b>Universidad Complutense de Madrid (UCM)</b>,
+                        donde inicié mi carrera en el diseño gráfico, desarrollando un agudo sentido estético y una profunda comprensión de la
+                        comunicación visual. Mi pasión por la tecnología me llevó a especializarme en UI y UX, campos en los que destaco por mi
+                        capacidad para crear interfaces intuitivas y experiencias de usuario atractivas.
                     </p>
                     <p>
                         Decidido a ampliar mis horizontes técnicos, me convertí en Técnico Superior en Desarrollo de
-                        Aplicaciones Web y
-                        Cloud. Durante esta etapa, adquirí habilidades avanzadas en diversas tecnologías y plataformas.
-                        Mi interés por el
-                        desarrollo y la implementación de soluciones en la nube me impulsó a especializarme en
-                        <b>DevOps</b>, con un enfoque
-                        particular en <b> AWS y Azure</b>.
+                        Aplicaciones Web y Cloud. Durante esta etapa, adquirí habilidades avanzadas en diversas tecnologías y plataformas.
+                        Mi interés por el desarrollo y la implementación de soluciones en la nube me impulsó a especializarme en
+                        <b>DevOps</b>, con un enfoque particular en <b>AWS y Azure</b>.
                     </p>
                     <p>
-                        Soy competente en una variedad de lenguajes y frameworks, incluyendo Python con Django,
-                        TypeScript con Angular, C#
+                        Soy competente en una variedad de lenguajes y frameworks, incluyendo Python con Django, TypeScript con Angular, C#
                         con .NET y Java con Spring Boot. Mi capacidad para adaptarme y dominar nuevas tecnologías me
-                        permite abordar
-                        proyectos complejos y aportar soluciones innovadoras. Con una combinación única de habilidades
-                        en diseño y
-                        desarrollo, estoy preparado para enfrentar los desafíos del entorno tecnológico actual y
-                        contribuir de manera
+                        permite abordar proyectos complejos y aportar soluciones innovadoras. Con una combinación única de habilidades
+                        en diseño y desarrollo, estoy preparado para enfrentar los desafíos del entorno tecnológico actual y contribuir de manera
                         significativa a cualquier equipo de desarrollo.
                     </p>
                     <div class="code" onclick="toggleSection('sobre-mi')">
@@ -189,9 +184,9 @@
                         </div>
                         <div id="desc1" class="project-description">
                             <p style="color: #9f9f9f;"><span>@Python Django / TypeScript Angular / AWS EC2, S3, Cloudfront, Route53, RDS PostgreSQL</span></p>
-                            <p>Este proyecto final de grado consiste en una red social desarrollada con Django y
-                                Angular, desplegada en AWS, que permite dejar un mensaje geolocalizado y que otros usuarios puedan leerlos y valorarlos en tiempo real.
-                               </p>
+                            <p>Este proyecto final de grado consiste en una aplicación web desarrollada con Django y Angular,
+                                desplegada en AWS, que permite dejar un mensaje geolocalizado y que otros usuarios puedan leerlos y valorarlos en tiempo real.
+                            </p>
                         </div>
                         <div class="display-inline">
                             <div class="code">&lt;li&gt;</div>
@@ -239,20 +234,6 @@
                 section.style.display = 'block';
             } else {
                 section.style.display = 'none';
-            }
-        }
-
-        function toggleMode() {
-            const body = document.body;
-            const toggleBtn = document.querySelector('.toggle-btn');
-            if (body.style.backgroundColor === 'rgb(51, 51, 51)') {
-                body.style.backgroundColor = '#333';
-                body.style.color = '#eee';
-                toggleBtn.textContent = 'Modo Claro';
-            } else {
-                body.style.backgroundColor = '#333';
-                body.style.color = '#eee';
-                toggleBtn.textContent = 'Modo Oscuro';
             }
         }
 
