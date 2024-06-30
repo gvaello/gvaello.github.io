@@ -1,7 +1,270 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio de Guillermo Vaello</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            background-color: #333;
+            color: #eee;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 50vw;
+            width: 100%;
+        }
+
+        .section-title {
+            font-weight: bold;
+            color: #ddd;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        .section-content {
+            display: block;
+            margin-top: 5px;
+        }
+
+        .code {
+            opacity: 0.7;
+            font-style: italic;
+            color: rgb(88, 154, 211);
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .toggle-btn {
+            background-color: #555;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        .display-inline {
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        li {
+            list-style-type: none;
+            color: #bbb;
+            margin-left: 10px;
+        }
+
+        li span {
+            font-weight: bold;
+        }
+
+        h1,
+        h2,
+        h3 {
+            margin: 0;
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            color: #aaa;
+        }
+
+        .project-description {
+            display: none;
+            margin-top: 5px;
+            margin-left: 20px;
+            color: #ddd;
+        }
+
+        .comment {
+            font-style: italic;
+            color: #888;
+        }
+    </style>
+</head>
+
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <div class="container">
+        <h1>Guillermo Vaello Checa</h1>
+        <p class="subtitle">Programador y DevOps junior, UI & UX designer</p>
+        <span onclick="toggleSection('main')" class="code section-title"> &lt;!DOCTYPE html&gt; </span>
+        <div id="main">
+            <br>
+            <div class="code section-title" onclick="toggleSection('head')">&lt;head&gt;</div>
+            <div id="head">
+                <div class="display-inline">
+                    <div class="code">
+                        &lt;title&gt;
+                    </div>
+                    <p>Portfolio de Guillermo Vaello</p>
+                    <div class="code">
+                        &lt;/title&gt;
+                    </div>
+                </div>
+            </div>
+            <div class="code section-title" onclick="toggleSection('head')">&lt;/head&gt;</div>
+            <br>
+            <div class="code section-title" onclick="toggleSection('body')">
+                &lt;body&gt;
+            </div>
+            <div id="body">
+                <div class="display-inline">
+                    <div class="code section-title" onclick="toggleSection('sobre-mi')">
+                        &lt;h2&gt;
+                    </div>
+                    <span class="section-title" onclick="toggleSection('sobre-mi')">
+                        <h3>Sobre mi</h3>
+                    </span>
+                    <div class="code section-title">
+                        &lt;/h2&gt;
+                    </div>
+                </div>
+                <div id="sobre-mi" class="section-content">
+                    <div class="code" onclick="toggleSection('sobre-mi')">
+                        &lt;p&gt;
+                    </div>
+                    <p>Soy Guillermo Vaello, un desarrollador versátil y multidisciplinario con una sólida formación
+                        académica y
+                        profesional. Me gradué en Publicidad por la <b>Universidad Complutense de Madrid (UCM)</b>,
+                        donde inicié mi carrera en el
+                        diseño gráfico, desarrollando un agudo sentido estético y una profunda comprensión de la
+                        comunicación visual. Mi
+                        pasión por la tecnología me llevó a especializarme en UI y UX, campos en los que destaco por mi
+                        capacidad para crear
+                        interfaces intuitivas y experiencias de usuario atractivas.
+                    </p>
+                    <p>
+                        Decidido a ampliar mis horizontes técnicos, me convertí en Técnico Superior en Desarrollo de
+                        Aplicaciones Web y
+                        Cloud. Durante esta etapa, adquirí habilidades avanzadas en diversas tecnologías y plataformas.
+                        Mi interés por el
+                        desarrollo y la implementación de soluciones en la nube me impulsó a especializarme en
+                        <b>DevOps</b>, con un enfoque
+                        particular en <b> AWS y Azure</b>.
+                    </p>
+                    <p>
+                        Soy competente en una variedad de lenguajes y frameworks, incluyendo Python con Django,
+                        TypeScript con Angular, C#
+                        con .NET y Java con Spring Boot. Mi capacidad para adaptarme y dominar nuevas tecnologías me
+                        permite abordar
+                        proyectos complejos y aportar soluciones innovadoras. Con una combinación única de habilidades
+                        en diseño y
+                        desarrollo, estoy preparado para enfrentar los desafíos del entorno tecnológico actual y
+                        contribuir de manera
+                        significativa a cualquier equipo de desarrollo.
+                    </p>
+                    <div class="code" onclick="toggleSection('sobre-mi')">
+                        &lt;/p&gt;
+                    </div>
+                </div>
+                <div class="display-inline">
+                    <div class="code section-title">
+                        &lt;h2&gt;
+                    </div>
+                    <span class="section-title" onclick="toggleSection('proyectos')">
+                        <h3>Proyectos</h3>
+                    </span>
+                    <div class="code section-title">
+                        &lt;/h2&gt;
+                    </div>
+                </div>
+                <div id="proyectos" class="section-content">
+                    <ul>
+                        <div class="comment">&lt;!-- Haz click para expandir --&gt;</div>
+                        <div class="display-inline">
+                            <div class="code">&lt;li&gt;</div>
+                            <li onclick="toggleDescription('desc1')">
+                                <span>Proyecto Final (TFG):</span> Red Social de Mensajes Geolocalizados - 2024
+                            </li>
+                            <div class="code">&lt;/li&gt;</div>
+                        </div>
+                        <div id="desc1" class="project-description">
+                            <p style="color: #9f9f9f;"><span>@Python Django / TypeScript Angular / AWS EC2, S3, Cloudfront, Route53, RDS PostgreSQL</span></p>
+                            <p>Este proyecto final de grado consiste en una aplicación web desarrollada con Django y
+                                Angular, desplegada en AWS, que permite gestionar recursos educativos de forma
+                                eficiente.</p>
+                        </div>
+                        <div class="display-inline">
+                            <div class="code">&lt;li&gt;</div>
+                            <li onclick="toggleDescription('desc2')">
+                                <span>Steam Random Game Selector:</span> Programa en Python - 2024
+                            </li>
+                            <div class="code">&lt;/li&gt;</div>
+                        </div>
+                        <div id="desc2" class="project-description">
+                            <p style="color: #9f9f9f;"><span>@Python Flask / Steam API</span></p>
+                            <p>Este programa selecciona aleatoriamente un juego de la biblioteca de Steam del usuario,
+                                proporcionando una opción divertida para decidir qué jugar.</p>
+                            <a href="https://github.com/gvaello/steam-random-game-picker" target="_blank">https://github.com/gvaello/steam-random-game-picker</a>
+                        </div>
+                        <div class="display-inline">
+                            <br>
+                            <div class="code">&lt;li&gt;</div>
+                            <li onclick="toggleDescription('desc3')">
+                                <span>Portfolio:</span> Proyectos personales - 2024
+                            </li>
+                            <div class="code">&lt;/li&gt;</div>
+                        </div>
+                        <div id="desc3" class="project-description">
+                            <p style="color: #9f9f9f;"><span>@HTML / Javascript / CSS</span></p>
+                            <p>Desarrollo de un portfolio para mostrar mis proyectos de código más recientes.</p>
+                            <a href="https://github.com/gvaello/gvaello.github.io" target="_blank">https://github.com/gvaello/gvaello.github.io</a>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            <div class="code section-title">
+                &lt;/body&gt;
+            </div>
+            <br>
+        </div>
+        <div class="code">
+            &lt;/html&gt;
+        </div>
+    </div>
+
+    <script>
+        function toggleSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section.style.display === 'none') {
+                section.style.display = 'block';
+            } else {
+                section.style.display = 'none';
+            }
+        }
+
+        function toggleMode() {
+            const body = document.body;
+            const toggleBtn = document.querySelector('.toggle-btn');
+            if (body.style.backgroundColor === 'rgb(51, 51, 51)') {
+                body.style.backgroundColor = '#333';
+                body.style.color = '#eee';
+                toggleBtn.textContent = 'Modo Claro';
+            } else {
+                body.style.backgroundColor = '#333';
+                body.style.color = '#eee';
+                toggleBtn.textContent = 'Modo Oscuro';
+            }
+        }
+
+        function toggleDescription(descId) {
+            const desc = document.getElementById(descId);
+            if (desc.style.display === 'none' || desc.style.display === '') {
+                desc.style.display = 'block';
+            } else {
+                desc.style.display = 'none';
+            }
+        }
+    </script>
 </body>
+
 </html>
